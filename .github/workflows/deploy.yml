@@ -36,6 +36,10 @@ jobs:
           rm -rf out-deploy/*
           cp -r out/* out-deploy/
           cd out-deploy
+          # Create .nojekyll file to disable Jekyll processing
+          touch .nojekyll
+          # Optionally, remove unwanted files like index.txt if present
+          rm -f index.txt
           git add .
           git commit -m "Deploy static site [skip ci]"
           git push origin main --force
