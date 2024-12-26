@@ -32,10 +32,11 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git clone --depth 1 --branch main https://github.com/rohanmhetar/rohanmhetar.github.io.git out-deploy
+          git clone --depth 1 --branch main https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/rohanmhetar/rohanmhetar.github.io.git out-deploy
           rm -rf out-deploy/*
           cp -r out/* out-deploy/
           cd out-deploy
           git add .
           git commit -m "Deploy static site [skip ci]"
           git push origin main --force
+
