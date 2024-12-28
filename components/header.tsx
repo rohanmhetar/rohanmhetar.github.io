@@ -1,30 +1,30 @@
-"use client"
+'use client'
 
-import Link from "next/link"
-import { useEffect } from "react"
+import Link from 'next/link'
+import { useEffect } from 'react'
 
 export default function Header() {
   useEffect(() => {
     const handleScroll = (e: Event) => {
       e.preventDefault()
       const target = e.target as HTMLAnchorElement
-      const id = target.getAttribute("href")?.slice(1)
+      const id = target.getAttribute('href')?.slice(1)
       if (id) {
         const element = document.getElementById(id)
         if (element) {
-          element.scrollIntoView({ behavior: "smooth" })
+          element.scrollIntoView({ behavior: 'smooth' })
         }
       }
     }
 
     const links = document.querySelectorAll('a[href^="#"]')
     links.forEach(link => {
-      link.addEventListener("click", handleScroll)
+      link.addEventListener('click', handleScroll)
     })
 
     return () => {
       links.forEach(link => {
-        link.removeEventListener("click", handleScroll)
+        link.removeEventListener('click', handleScroll)
       })
     }
   }, [])
@@ -45,4 +45,3 @@ export default function Header() {
     </header>
   )
 }
-

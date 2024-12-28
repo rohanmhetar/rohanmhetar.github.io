@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from 'next/image'
 
 interface ExperienceCardProps {
   logo: string
@@ -7,9 +7,10 @@ interface ExperienceCardProps {
   location: string
   date: string
   description: string[]
+  emoji: string
 }
 
-export default function ExperienceCard({ logo, title, company, location, date, description }: ExperienceCardProps) {
+export default function ExperienceCard({ logo, title, company, location, date, description, emoji }: ExperienceCardProps) {
   return (
     <div className="bg-white shadow-md rounded-lg p-6 mb-6">
       <div className="flex items-center mb-4">
@@ -22,12 +23,12 @@ export default function ExperienceCard({ logo, title, company, location, date, d
           />
         </div>
         <div>
-          <h3 className="text-xl font-semibold">{title}</h3>
-          <p className="text-gray-600">{company} | {location}</p>
-          <p className="text-gray-500">{date}</p>
+          <h3 className="text-xl font-semibold text-blue-800">{title} {emoji}</h3>
+          <p className="text-gray-700">{company} | {location}</p>
+          <p className="text-gray-600">{date}</p>
         </div>
       </div>
-      <ul className="list-disc list-inside">
+      <ul className="list-disc list-inside text-gray-700">
         {description.map((item, index) => (
           <li key={index} className="mb-2">{item}</li>
         ))}
@@ -35,4 +36,3 @@ export default function ExperienceCard({ logo, title, company, location, date, d
     </div>
   )
 }
-
