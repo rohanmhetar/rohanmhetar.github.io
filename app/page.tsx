@@ -13,7 +13,7 @@ export default function Home() {
         <div className="text-center">
           <div className="mb-6 relative w-48 h-48 mx-auto rounded-full overflow-hidden">
             <Image
-              src="/placeholder.svg?height=192&width=192"
+              src="/rohan_mhetar.jpeg?height=192&width=192"
               alt="Rohan Mhetar"
               layout="fill"
               objectFit="cover"
