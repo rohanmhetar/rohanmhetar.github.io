@@ -1,7 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef } from 'react'
-import Typed from 'typed.js'
+import React, { useState, useEffect } from 'react'
 
 const phrases = [
   'Software Engineer',
@@ -17,25 +16,42 @@ const phrases = [
 ]
 
 export function TypingAnimation() {
-  const el = useRef(null)
+  const [displayText, setDisplayText] = useState('')
+  const [phraseIndex, setPhraseIndex] = useState(0)
+  const [charIndex, setCharIndex] = useState(0)
+  const [isTyping, setIsTyping] = useState(true)
 
   useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: phrases,
-      typeSpeed: 40,
-      backSpeed: 50,
-      loop: true
-    })
+    const intervalId = setInterval(() => {
+      if (isTyping) {
+        if (charIndex < phrases[phraseIndex].length) {
+          setDisplayText(prev => prev + phrases[phraseIndex][charIndex])
+          setCharIndex(prev => prev + 1)
+        } else {
+          setIsTyping(false)
+          setTimeout(() => setIsTyping(true), 1000) // Pause before backspacing
+        }
+      } else {
+        if (charIndex > 0) {
+          setDisplayText(prev => prev.slice(0, -1))
+          setCharIndex(prev => prev - 1)
+        } else {
+          setIsTyping(true)
+          setPhraseIndex((prev) => (prev + 1) % phrases.length)
+        }
+      }
+    }, isTyping ? 100 : 50) // Type slower, backspace faster
 
-    return () => {
-      typed.destroy()
-    }
-  }, [])
+    return () => clearInterval(intervalId)
+  }, [charIndex, phraseIndex, isTyping])
 
   return (
     <div className="text-center py-8 bg-blue-50">
       <h2 className="text-3xl font-bold text-blue-800 mb-4">I am a</h2>
-      <span ref={el} className="text-2xl text-blue-600"></span>
+      <div className="text-2xl text-blue-600 h-8">
+        {displayText}
+        <span className="animate-blink">|</span>
+      </div>
     </div>
   )
 }
