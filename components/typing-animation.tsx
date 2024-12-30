@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useState, useEffect } from 'react'
 
 const phrases = [
@@ -16,41 +15,52 @@ const phrases = [
 ]
 
 export function TypingAnimation() {
-  const [displayText, setDisplayText] = useState('')
-  const [phraseIndex, setPhraseIndex] = useState(0)
-  const [charIndex, setCharIndex] = useState(0)
-  const [isTyping, setIsTyping] = useState(true)
+  const [currentPhrase, setCurrentPhrase] = useState('')
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      if (isTyping) {
-        if (charIndex < phrases[phraseIndex].length) {
-          setDisplayText(prev => prev + phrases[phraseIndex][charIndex])
-          setCharIndex(prev => prev + 1)
+    const typingSpeed = 100 // Speed for typing
+    const deletingSpeed = 50 // Speed for deleting
+    const pauseDuration = 1000 // Pause duration at the end of typing/deleting
+
+    const typeCharacter = () => {
+      const currentText = phrases[currentIndex]
+
+      if (!isDeleting) {
+        // Typing
+        if (currentPhrase.length < currentText.length) {
+          setCurrentPhrase(currentText.slice(0, currentPhrase.length + 1))
+          return typingSpeed
         } else {
-          setIsTyping(false)
-          setTimeout(() => setIsTyping(true), 1000) // Pause before backspacing
+          // Finished typing
+          setIsDeleting(true)
+          return pauseDuration
         }
       } else {
-        if (charIndex > 0) {
-          setDisplayText(prev => prev.slice(0, -1))
-          setCharIndex(prev => prev - 1)
+        // Deleting
+        if (currentPhrase.length > 0) {
+          setCurrentPhrase(currentText.slice(0, currentPhrase.length - 1))
+          return deletingSpeed
         } else {
-          setIsTyping(true)
-          setPhraseIndex(prev => (prev + 1) % phrases.length) // Move to the next phrase
+          // Finished deleting
+          setIsDeleting(false)
+          setCurrentIndex((prev) => (prev + 1) % phrases.length)
+          return typingSpeed
         }
       }
-    }, isTyping ? 100 : 50) // Type slower, backspace faster
+    }
 
-    return () => clearInterval(intervalId)
-  }, [charIndex, isTyping]) // Removed phraseIndex dependency to avoid redundant re-renders
+    const timer = setTimeout(typeCharacter, isDeleting ? deletingSpeed : typingSpeed)
+    return () => clearTimeout(timer)
+  }, [currentPhrase, isDeleting, currentIndex])
 
   return (
     <div className="text-center py-8 bg-blue-50">
       <h2 className="text-3xl font-bold text-blue-800 mb-4">I am a</h2>
       <div className="text-2xl text-blue-600 h-8">
-        {displayText}
-        <span className="animate-blink">|</span>
+        {currentPhrase}
+        <span className="animate-pulse">|</span>
       </div>
     </div>
   )
