@@ -37,13 +37,13 @@ export function TypingAnimation() {
           setCharIndex(prev => prev - 1)
         } else {
           setIsTyping(true)
-          setPhraseIndex((prev) => (prev + 1) % phrases.length)
+          setPhraseIndex(prev => (prev + 1) % phrases.length) // Move to the next phrase
         }
       }
     }, isTyping ? 100 : 50) // Type slower, backspace faster
 
     return () => clearInterval(intervalId)
-  }, [charIndex, phraseIndex, isTyping])
+  }, [charIndex, isTyping]) // Removed phraseIndex dependency to avoid redundant re-renders
 
   return (
     <div className="text-center py-8 bg-blue-50">
