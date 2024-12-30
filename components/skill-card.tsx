@@ -1,8 +1,8 @@
-import { type LucideIcon } from 'lucide-react'
+import { TypeIcon as type, LucideIcon } from 'lucide-react'
 
 interface SkillCardProps {
   title: string
-  skills: Array<{ name: string; icon: LucideIcon }>
+  skills: Array<{ name: string; icon: React.ReactNode }>
 }
 
 export default function SkillCard({ title, skills }: SkillCardProps) {
@@ -12,7 +12,7 @@ export default function SkillCard({ title, skills }: SkillCardProps) {
       <ul className="space-y-2">
         {skills.map((skill, index) => (
           <li key={index} className="flex items-center">
-            <skill.icon className="w-5 h-5 mr-2 text-blue-600" />
+            <span className="w-6 h-6 mr-2 flex items-center justify-center">{skill.icon}</span>
             <span className="text-gray-700">{skill.name}</span>
           </li>
         ))}
