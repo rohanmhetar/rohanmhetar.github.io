@@ -5,7 +5,6 @@ import ProjectCard from '@/components/project-card'
 import SkillCard from '@/components/skill-card'
 import Timeline from '@/components/timeline'
 import { Button } from '@/components/ui/button'
-import { Code, Globe, Cloud, Database, Brain, Users, MessageSquare, Lightbulb, Zap, PiIcon as Python, FileCode, Coffee, Cpu, Server, Figma, GitBranch, BarChart, Table, Network, Layers } from 'lucide-react'
 
 export default function Home() {
   return (

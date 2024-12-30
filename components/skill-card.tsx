@@ -1,5 +1,3 @@
-import { TypeIcon as type, LucideIcon } from 'lucide-react'
-
 interface SkillCardProps {
   title: string
   skills: Array<{ name: string; icon: React.ReactNode }>
