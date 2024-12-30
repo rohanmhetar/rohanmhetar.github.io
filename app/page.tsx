@@ -5,6 +5,7 @@ import ProjectCard from '@/components/project-card'
 import SkillCard from '@/components/skill-card'
 import Timeline from '@/components/timeline'
 import { Button } from '@/components/ui/button'
+import { Code, Globe, Cloud, Database, Brain, Users, MessageSquare, Lightbulb, Zap, PiIcon as Python, FileCode, Coffee, Cpu, Server, Figma, GitBranch, BarChart, Table, Network, Layers } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -179,113 +180,113 @@ export default function Home() {
       </Section>
 
       <Section id="skills" title="Skills">
-  <div className="space-y-6">
-    <div>
-      <h3 className="text-2xl font-semibold mb-4 text-blue-800">Hard Skills</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <SkillCard
-          title="Programming Languages"
-          skills={[
-            "Python",
-            "JavaScript",
-            "TypeScript",
-            "Java",
-            "C++",
-            "Go",
-            "C#",
-            "C",
-            "R",
-            "CUDA"
-          ]}
-        />
-        <SkillCard
-          title="Web Development & Frameworks"
-          skills={[
-            "React",
-            "Next.js",
-            "Node.js",
-            "Angular",
-            "Vue.js",
-            "Flask",
-            "Django",
-            "HTML/CSS",
-            "jQuery"
-          ]}
-        />
-        <SkillCard
-          title="Cloud & DevOps"
-          skills={[
-            "AWS",
-            "Docker",
-            "Kubernetes",
-            "CI/CD",
-            "GCP",
-            "Azure",
-            "Heroku"
-          ]}
-        />
-        <SkillCard
-          title="Databases & APIs"
-          skills={[
-            "SQL (PostgreSQL, MySQL)",
-            "MongoDB",
-            "GraphQL",
-            "RESTful APIs"
-          ]}
-        />
-        <SkillCard
-          title="Machine Learning & Data Science"
-          skills={[
-            "TensorFlow",
-            "PyTorch",
-            "Scikit-Learn",
-            "Neural Networks",
-            "OpenCV",
-            "Pandas",
-            "NumPy"
-          ]}
-        />
-      </div>
-    </div>
-    <div>
-      <h3 className="text-2xl font-semibold mb-4 text-blue-800">Soft Skills</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <SkillCard
-          title="Leadership & Management"
-          skills={[
-            "Project Management",
-            "Team Leadership",
-            "Strategic Planning"
-          ]}
-        />
-        <SkillCard
-          title="Communication"
-          skills={[
-            "Technical Writing",
-            "Public Speaking",
-            "Cross-functional Collaboration"
-          ]}
-        />
-        <SkillCard
-          title="Problem Solving"
-          skills={[
-            "Analytical Thinking",
-            "Critical Reasoning",
-            "Creative Solution Design"
-          ]}
-        />
-        <SkillCard
-          title="Adaptability"
-          skills={[
-            "Quick Learning",
-            "Flexibility",
-            "Handling Ambiguity"
-          ]}
-        />
-      </div>
-    </div>
-  </div>
-</Section>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-2xl font-semibold mb-4 text-blue-800">Hard Skills</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <SkillCard
+                title="Programming Languages"
+                skills={[
+                  { name: "Python", icon: Python },
+                  { name: "JavaScript", icon: FileCode },
+                  { name: "TypeScript", icon: FileCode },
+                  { name: "Java", icon: Coffee },
+                  { name: "C++", icon: Cpu },
+                  { name: "Go", icon: Server },
+                  { name: "C#", icon: Code },
+                  { name: "C", icon: Code },
+                  { name: "R", icon: BarChart },
+                  { name: "CUDA", icon: Layers },
+                ]}
+              />
+              <SkillCard
+                title="Web Development & Frameworks"
+                skills={[
+                  { name: "React", icon: Code },
+                  { name: "Next.js", icon: Server },
+                  { name: "Node.js", icon: Server },
+                  { name: "Angular", icon: Code },
+                  { name: "Vue.js", icon: Code },
+                  { name: "Flask", icon: Python },
+                  { name: "Django", icon: Python },
+                  { name: "HTML/CSS", icon: FileCode },
+                  { name: "jQuery", icon: Code },
+                ]}
+              />
+              <SkillCard
+                title="Cloud & DevOps"
+                skills={[
+                  { name: "AWS", icon: Cloud },
+                  { name: "Docker", icon: Database },
+                  { name: "Kubernetes", icon: Cloud },
+                  { name: "CI/CD", icon: GitBranch },
+                  { name: "GCP", icon: Cloud },
+                  { name: "Azure", icon: Cloud },
+                  { name: "Heroku", icon: Server },
+                ]}
+              />
+              <SkillCard
+                title="Databases & APIs"
+                skills={[
+                  { name: "SQL (PostgreSQL, MySQL)", icon: Database },
+                  { name: "MongoDB", icon: Database },
+                  { name: "GraphQL", icon: Globe },
+                  { name: "RESTful APIs", icon: Network },
+                ]}
+              />
+              <SkillCard
+                title="Machine Learning & Data Science"
+                skills={[
+                  { name: "TensorFlow", icon: Brain },
+                  { name: "PyTorch", icon: Brain },
+                  { name: "Scikit-Learn", icon: Brain },
+                  { name: "Neural Networks", icon: Network },
+                  { name: "OpenCV", icon: Figma },
+                  { name: "Pandas", icon: Table },
+                  { name: "NumPy", icon: BarChart },
+                ]}
+              />
+            </div>
+          </div>
+          <div>
+            <h3 className="text-2xl font-semibold mb-4 text-blue-800">Soft Skills</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <SkillCard
+                title="Leadership & Management"
+                skills={[
+                  { name: "Project Management", icon: Users },
+                  { name: "Team Leadership", icon: Users },
+                  { name: "Strategic Planning", icon: Lightbulb },
+                ]}
+              />
+              <SkillCard
+                title="Communication"
+                skills={[
+                  { name: "Technical Writing", icon: FileCode },
+                  { name: "Public Speaking", icon: MessageSquare },
+                  { name: "Cross-functional Collaboration", icon: Users },
+                ]}
+              />
+              <SkillCard
+                title="Problem Solving"
+                skills={[
+                  { name: "Analytical Thinking", icon: Lightbulb },
+                  { name: "Critical Reasoning", icon: Brain },
+                  { name: "Creative Solution Design", icon: Zap },
+                ]}
+              />
+              <SkillCard
+                title="Adaptability"
+                skills={[
+                  { name: "Quick Learning", icon: Zap },
+                  { name: "Flexibility", icon: Zap },
+                  { name: "Handling Ambiguity", icon: Lightbulb },
+                ]}
+              />
+            </div>
+          </div>
+        </div>
+      </Section>
     </div>
   )
 }
