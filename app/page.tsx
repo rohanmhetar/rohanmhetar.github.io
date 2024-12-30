@@ -5,6 +5,7 @@ import ProjectCard from '@/components/project-card'
 import SkillCard from '@/components/skill-card'
 import Timeline from '@/components/timeline'
 import { Button } from '@/components/ui/button'
+import { TypingAnimation } from '@/components/typing-animation'
 
 export default function Home() {
   return (
@@ -34,6 +35,8 @@ export default function Home() {
           </div>
         </div>
       </Section>
+
+      <TypingAnimation />
 
       <Section id="education" title="Education">
   <div className="bg-white shadow-md rounded-lg p-6">
