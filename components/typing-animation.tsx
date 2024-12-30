@@ -4,14 +4,10 @@ import React, { useState, useEffect } from 'react'
 const phrases = [
   'Software Engineer',
   'Full-Stack Developer',
-  'Machine Learning Enthusiast',
-  'Problem Solver',
-  'Tech Innovator',
-  'Code Craftsman',
-  'Algorithm Architect',
-  'Digital Creator',
-  'AI Explorer',
-  'Open Source Contributor'
+  'Machine Learning Engineer',
+  'Pacers Fan',
+  'CJ Stroud Glazer',
+  'Constant Learner',
 ]
 
 export function TypingAnimation() {
