@@ -62,6 +62,7 @@ export default function Home() {
     <ul className="list-disc list-inside text-gray-700">
       <li>Texas Undergraduate Computational Finance (Analyst)</li>
       <li>Texas Convergent (Technical Program Manager)</li>
+      <li>Social Entrepreneurship Learning Lab (Finance Chair)</li>
       <li>Programmers with Disabilities (Co-Founder and Outreach Chair)</li>
       <li>EcoCar EV Challenge (CAV Engineer)</li>
     </ul>
