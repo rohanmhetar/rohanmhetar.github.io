@@ -43,7 +43,7 @@ export default function Home() {
     <div className="flex items-center mb-4">
       <div className="mr-4 relative w-16 h-16">
         <Image
-          src="/placeholder.svg?height=64&width=64"
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/University_of_Texas_at_Austin_seal.svg/225px-University_of_Texas_at_Austin_seal.svg.png?height=64&width=64"
           alt="University of Texas at Austin logo"
           layout="fill"
           objectFit="contain"
