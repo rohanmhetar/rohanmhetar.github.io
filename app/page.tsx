@@ -101,7 +101,7 @@ export default function Home() {
           </Timeline.Item>
           <Timeline.Item side="left">
             <ExperienceCard
-              logo="/placeholder.svg?height=64&width=64"
+              logo="https://cdn.iconscout.com/icon/free/png-256/free-amazon-logo-icon-download-in-svg-png-gif-file-formats--brand-social-media-card-pack-logos-icons-1583154.png?f=webp?height=64&width=64"
               title="Software Engineer Intern"
               company="Amazon"
               location="Austin, TX"
@@ -115,7 +115,7 @@ export default function Home() {
           </Timeline.Item>
           <Timeline.Item side="right">
             <ExperienceCard
-              logo="/placeholder.svg?height=64&width=64"
+              logo="http://www.computationalmedialab.com/wp-content/uploads/2017/03/logo-1.png?height=64&width=64"
               title="Machine Learning Researcher"
               company="Computational Media Lab"
               location="Austin, TX"
@@ -129,7 +129,7 @@ export default function Home() {
           </Timeline.Item>
           <Timeline.Item side="left">
             <ExperienceCard
-              logo="/placeholder.svg?height=64&width=64"
+              logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsurGMz2Ado-5TnNOd3Em8YMY78o_3YGOWGw&s?height=64&width=64"
               title="Software Engineer Intern"
               company="State Street Corporation"
               location="Austin, TX"
@@ -143,7 +143,7 @@ export default function Home() {
           </Timeline.Item>
           <Timeline.Item side="right">
             <ExperienceCard
-              logo="/placeholder.svg?height=64&width=64"
+              logo="https://cdn.worldvectorlogo.com/logos/nasa-1.svg?height=64&width=64"
               title="Software Engineer Intern"
               company="NASA"
               location="Houston, TX"
