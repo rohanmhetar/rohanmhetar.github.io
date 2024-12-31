@@ -73,7 +73,7 @@ export default function Home() {
         <Timeline>
           <Timeline.Item side="left">
             <ExperienceCard
-              logo="/placeholder.svg?height=64&width=64"
+              logo="https://media.licdn.com/dms/image/C4D12AQFr26O-L_zHXw/article-cover_image-shrink_600_2000/0/1520077587000?e=2147483647&v=beta&t=hNYt7BHFmImXAka11EhMfXI8fRxwfG7a7ryfQ1AESLM?height=64&width=64"
               title="Software Engineer Intern"
               company="ZipRecruiter"
               location="Santa Monica, CA"
@@ -87,7 +87,7 @@ export default function Home() {
           </Timeline.Item>
           <Timeline.Item side="right">
             <ExperienceCard
-              logo="/placeholder.svg?height=64&width=64"
+              logo="https://www.mealsonwheelscentraltexas.org/uploads/images/general/MOW_State_TEXAS_RGB_SQUARE.jpg?height=64&width=64"
               title="Lead Software Engineer"
               company="Meals on Wheels"
               location="Austin, TX"
