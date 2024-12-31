@@ -65,15 +65,6 @@ export default function Home() {
       <li>Programmers with Disabilities (Co-Founder and Outreach Chair)</li>
       <li>EcoCar EV Challenge (CAV Engineer)</li>
     </ul>
-    <h4 className="font-semibold mt-4 text-blue-700">Awards:</h4>
-    <ul className="list-disc list-inside text-gray-700">
-      <li>1st Place in Bloomberg B Puzzled (UT Austin)</li>
-      <li>1st Place in Stock Simulator Competition</li>
-      <li>Perfect Score on AMC 12</li>
-      <li>3x AIME Qualifier</li>
-      <li>USACO Gold Recipient</li>
-      <li>Global Finalist in NASA Space Apps Hackathon</li>
-    </ul>
   </div>
 </Section>
 
