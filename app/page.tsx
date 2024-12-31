@@ -101,7 +101,7 @@ export default function Home() {
           </Timeline.Item>
           <Timeline.Item side="left">
             <ExperienceCard
-              logo="https://cdn.iconscout.com/icon/free/png-256/free-amazon-logo-icon-download-in-svg-png-gif-file-formats--brand-social-media-card-pack-logos-icons-1583154.png?f=webp?height=64&width=64"
+              logo="https://pngimg.com/uploads/amazon/amazon_PNG17.png?height=64&width=64"
               title="Software Engineer Intern"
               company="Amazon"
               location="Austin, TX"
