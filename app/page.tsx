@@ -14,7 +14,7 @@ export default function Home() {
         <div className="text-center">
           <div className="mb-6 relative w-48 h-48 mx-auto rounded-full overflow-hidden">
             <Image
-              src="rohan_mhetar.jpeg"
+              src="https://media.licdn.com/dms/image/v2/D5603AQEyxUqHzw1DTw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1705814130750?e=1741219200&v=beta&t=9wV7slYdIrIJNCOc2w9UJMIXJihoDGIso8XnO2uGBhU"
               alt="Rohan Mhetar"
               layout="fill"
               objectFit="cover"
