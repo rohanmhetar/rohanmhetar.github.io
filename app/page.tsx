@@ -73,7 +73,7 @@ export default function Home() {
         <Timeline>
           <Timeline.Item side="left">
             <ExperienceCard
-              logo="https://www.ziprecruiter.com/blog/static/wp-content/uploads/2021/04/23115040/blog-logo-vignette-1.jpg?height=64&width=64"
+              logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTkMJPo8PUWuy1eJdB6pnI_qPFn9Ot0uklig&s?height=64&width=64"
               title="Software Engineer Intern"
               company="ZipRecruiter"
               location="Santa Monica, CA"
