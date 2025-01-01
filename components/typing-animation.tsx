@@ -8,8 +8,9 @@ const phrases = [
   'Pacers Fan',
   'CJ Stroud Glazer',
   'Constant Learner',
-  "Roy Hibbert's Number One Fan",
-  "Raj Mhetar's Brother", 
+  "Roy Hibbert Fan",
+  "Brother of Raj Mhetar", 
+  "Fun Guy"
 ]
 
 export function TypingAnimation() {
