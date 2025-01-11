@@ -16,8 +16,7 @@ export default function ExperienceCard({
   company, 
   location, 
   date, 
-  description, 
-  technologies,
+  description,
   emoji 
 }: ExperienceCardProps) {
   return (
