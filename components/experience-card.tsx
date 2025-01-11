@@ -42,16 +42,6 @@ export default function ExperienceCard({
           <li key={index} className="mb-2">{item}</li>
         ))}
       </ul>
-      <div className="mt-4">
-        <h4 className="text-lg font-semibold text-blue-700 mb-2">Technologies Used:</h4>
-        <div className="flex flex-wrap gap-2">
-          {technologies.map((tech, index) => (
-            <span key={index} className="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
     </div>
   )
 }
