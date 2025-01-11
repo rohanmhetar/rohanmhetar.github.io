@@ -27,7 +27,7 @@ export default function Home() {
               <a href="mailto:rohanmhetar@utexas.edu">Contact Me</a>
             </Button>
             <Button asChild variant="outline">
-              <a href="https://linkedin.com/in/rohanmhetar" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/rohan-mhetar-03a30916a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </Button>
             <Button asChild variant="outline">
               <a href="https://github.com/rohanmhetar" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -168,7 +168,7 @@ export default function Home() {
           <ProjectCard
             title="Automated Trading System"
             description="Developed and maintained a high-frequency trading platform using Python and C++. Implemented real-time data acquisition with NumPy, backtesting with Backtrader, and multi-threaded order execution with asyncio. Utilized TensorFlow for predictive modeling and integrated with FIX protocol for exchange connectivity."
-            link="https://github.com/rohanmhetar/trading-system"
+            link="https://github.com/rohanmhetar/hft-platform"
           />
         </div>
       </Section>
